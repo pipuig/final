@@ -1,0 +1,1 @@
+Reemplazar todo en ..\final\src\static

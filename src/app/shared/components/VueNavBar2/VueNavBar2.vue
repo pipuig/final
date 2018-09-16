@@ -1,20 +1,13 @@
 <template>
-  <div :class="$style.vueNavBar" ref="nav">
+  <div :class="$style.vueNavBar2" ref="nav">
     <div :class="$style.bg">
-      <div :class="$style.accent" />
     </div>
 
     <vue-grid>
       <vue-grid-row>
-        <vue-grid-item class="vueGridItem">
-          <router-link to="/ofrendas" exact>
+        <vue-grid-item fill>
+          <router-link to="/" exact>
             <img :class="$style.brand" :src="imageUrl" alt="logo" />
-          </router-link>
-          <router-link to="/peregrinacion" exact>
-          <img :class="$style.brand" :src="imageUrl3" alt="logo" />
-          </router-link>
-          <router-link to="/peregrinacion" exact>
-          <img :class="$style.brand" :src="imageUrl2" alt="logo" />
           </router-link>
         </vue-grid-item>
       </vue-grid-row>
@@ -44,17 +37,7 @@
       imageUrl: {
         type:     String,
         required: false,
-        default:  '/dona.png',
-      },
-      imageUrl2: {
-        type:     String,
-        required: false,
-        default:  '/pere.png',
-      },
-      imageUrl3: {
-        type:     String,
-        required: false,
-        default:  '/shop.png',
+        default:  '/circle.png',
       },
     },
     computed:   {
@@ -64,6 +47,7 @@
       },
       hamburgerCssClasses() {
         const classes = [this.$style.hamburger];
+
       },
     },
     methods:    {
@@ -100,16 +84,15 @@
 <style lang="scss" module>
   @import "../../styles";
 
-  .vueNavBar {
+  .vueNavBar2 {
     width:      $nav-bar-width;
-    min-height: $nav-bar-height;
+    max-height: 4.5rem;
     color:      $nav-bar-color;
     padding:    $nav-bar-padding;
     z-index:    $nav-bar-index;
     position:   fixed;
-    bottom:        0;
+    top:        0;
     left:       0;
-    text-align: center;
   }
 
   .bg {
@@ -146,8 +129,8 @@
 
   .brand {
     flex: 1;
-    padding: 0 3%;
-    height:  $nav-bar-height - ($space-unit);
+    padding: $space-unit * 2 0 0 0;
+    height:  4.5rem - ($space-unit);
     z-index: 2;
   }
 

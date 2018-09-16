@@ -10,7 +10,7 @@
         <vue-grid-item class="vueGridItem">
           <vue-panel class="vuePanel">
             <vue-panel-body>
-              <iframe src="https://www.google.com/maps/d/embed?mid=1LmtIrL9GMAwG363iuwpSDgLxDLM&hl=es-419"></iframe>
+              <iframe src="https://www.google.com/maps/d/embed?mid=1RX-IYlMAbDjHynUfmfdl2OneeDHyMYvN"></iframe>
             </vue-panel-body>
           </vue-panel>
         </vue-grid-item>

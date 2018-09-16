@@ -5,6 +5,7 @@ import { AppRoutes }                     from './app/routes';
 import { HomeRoutes }                    from './home/routes';
 import { CounterRoutes }                 from './counter/routes';
 import { ComponentsRoutes }              from './components/routes';
+import { PereRoutes }              from './peregrinacion/routes';
 
 Vue.use(VueRouter);
 Vue.use(Meta);
@@ -18,6 +19,7 @@ export const router: VueRouter = new VueRouter(
       ...HomeRoutes,
       ...CounterRoutes,
       ...ComponentsRoutes,
+      ...PereRoutes,
     ],
     scrollBehavior(to: Route, from: Route, savedPosition: { x: number, y: number }) {
       if (to.hash) {

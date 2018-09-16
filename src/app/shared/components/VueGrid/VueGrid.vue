@@ -14,28 +14,28 @@
   @import "../../styles";
 
   .grid {
-    max-width: 425px;
+    //max-width: 425px;
     margin:    0 auto;
     position:  relative;
     padding:   0 $screen-phone-gutter;
 
     @include media(tabletPortrait) {
-      max-width: $screen-tablet-portrait;
+      //max-width: $screen-tablet-portrait;
       padding:   0 $screen-tablet-portrait-gutter;
     }
 
     @include media(tabletLandscape) {
-      max-width: $screen-tablet-landscape;
+      //max-width: $screen-tablet-landscape;
       padding:   0 $screen-tablet-landscape-gutter;
     }
 
     @include media(smallDesktop) {
-      max-width: $screen-small-desktop;
+      //max-width: $screen-small-desktop;
       padding:   0 $screen-small-desktop-gutter;
     }
 
     @include media(largeDesktop) {
-      max-width: $screen-large-desktop;
+      //max-width: $screen-large-desktop;
       padding:   0 $screen-large-desktop-gutter;
     }
   }

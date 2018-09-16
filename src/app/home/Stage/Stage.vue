@@ -1,21 +1,16 @@
 <template>
   <div :class="$style.stage" ref="stage">
-    <canvas :class="$style.canvas" ref="canvas"></canvas>
+     <canvas :class="$style.canvas" ref="canvas"></canvas>
     <div :class="$style.accent"></div>
     <div :class="$style.accentTwo"></div>
 
     <vue-grid>
       <vue-grid-row>
         <vue-grid-item class="vueGridItem">
-          <h1 :class="$style.title">Basilica de Lujan</h1>
+          <h1 :class="$style.title">Santuario de Lujan</h1>
           <div :class="$style.subTitle">
-          <p>Esta es la descripción de la Basilica</p>
+          <p>Basilica de Lujan</p>
           </div>
-
-          <a :class="$style.github" href="https://github.com/devCrossNet/vue-starter" target="_blank" rel="noopener"
-             aria-label="github repository">
-            <vue-icon-github />
-          </a>
         </vue-grid-item>
       </vue-grid-row>
     </vue-grid>
@@ -132,7 +127,7 @@
     min-height:       100vh;
     width:            100%;
     position:         absolute;
-    background-color: transparent;
+    background-image: "/shop.png";
     left:             0;
     top:              0;
   }

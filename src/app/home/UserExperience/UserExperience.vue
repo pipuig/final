@@ -1,5 +1,6 @@
 <template>
   <div :class="[$style.userExperience, 'featureSection']">
+
     <vue-grid>
 
         <!--

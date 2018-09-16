@@ -1,18 +1,18 @@
 import { createLocalVue, mount, RouterLinkStub } from '@vue/test-utils';
-import VueNavBar                                 from './VueNavBar.vue';
+import VueNavBar2                                 from './VueNavBar2.vue';
 import { EventBus }                              from '../../services/EventBus';
 
 const localVue = createLocalVue();
 
-describe('VueNavBar.vue', () => {
+describe('VueNavBar2.vue', () => {
 
   test('renders component', () => {
-    const wrapper = mount(VueNavBar, {
+    const wrapper = mount(VueNavBar2, {
       localVue,
       stubs: ['router-link'],
     });
 
-    expect(wrapper.findAll(`.vueNavBar`)).toHaveLength(1);
+    expect(wrapper.findAll(`.vueNavBar2`)).toHaveLength(1);
   });
 
   test('adds and removes scroll/click/touchstart listeners', () => {
@@ -21,7 +21,7 @@ describe('VueNavBar.vue', () => {
     document.addEventListener = jest.fn();
     document.removeEventListener = jest.fn();
 
-    const wrapper = mount(VueNavBar, {
+    const wrapper = mount(VueNavBar2, {
       localVue,
       stubs: ['router-link'],
     });
@@ -37,7 +37,7 @@ describe('VueNavBar.vue', () => {
   /*
 
   test('should add sticky class', () => {
-    const wrapper: any = mount(VueNavBar, {
+    const wrapper: any = mount(VueNavBar2, {
       localVue,
       stubs: ['router-link'],
     });
@@ -45,6 +45,7 @@ describe('VueNavBar.vue', () => {
     (window as any).pageYOffset = 100;
     wrapper.vm.handleScroll();
     expect(wrapper.findAll(`.in`)).toHaveLength(2);
+    //wrapper.findAll(`.in`)
 
     (window as any).pageYOffset = undefined;
     document.documentElement.scrollTop = 100;
@@ -65,14 +66,14 @@ describe('VueNavBar.vue', () => {
   });
 
   test('should open menu and close it on outside click', () => {
-    const wrapper: any = mount(VueNavBar, {
+    const wrapper: any = mount(VueNavBar2, {
       localVue,
       stubs: ['router-link'],
     });
 
     expect(wrapper.vm.isOpen).toBeFalsy();
 
-    wrapper.find(`.hamburger`).trigger('click');
+    //wrapper.find(`.hamburger`).trigger('click');
     expect(wrapper.vm.isOpen).toBeTruthy();
 
     wrapper.vm.handleDocumentClick({ target: wrapper.find(`.hamburger`).element });
@@ -83,7 +84,7 @@ describe('VueNavBar.vue', () => {
   });
 
   test('should close navbar when close event is received', () => {
-    const wrapper: any = mount(VueNavBar, {
+    const wrapper: any = mount(VueNavBar2, {
       localVue,
       stubs: ['router-link'],
     });
@@ -91,7 +92,7 @@ describe('VueNavBar.vue', () => {
     // Open the navbar to initialize:
     expect(wrapper.vm.isOpen).toBeFalsy();
 
-    wrapper.find(`.hamburger`).trigger('click');
+    //wrapper.find(`.hamburger`).trigger('click');
     expect(wrapper.vm.isOpen).toBeTruthy();
 
     wrapper.vm.handleDocumentClick({ target: wrapper.find(`.hamburger`).element });
@@ -105,18 +106,19 @@ describe('VueNavBar.vue', () => {
   });
 
   test('should close navbar when brand logo is clicked', () => {
-    const wrapper = mount(VueNavBar, {
+    const wrapper = mount(VueNavBar2, {
       localVue,
       stubs: {
         RouterLink: RouterLinkStub,
       },
     }) as any;
 
-    wrapper.find(`.hamburger`).trigger('click');
+    //wrapper.find(`.hamburger`).trigger('click');
     expect(wrapper.vm.isOpen).toBeTruthy();
 
     wrapper.find('a').trigger('click');
     expect(wrapper.vm.isOpen).toBeFalsy();
   });
+
   */
 });

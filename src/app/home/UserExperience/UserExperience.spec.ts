@@ -11,7 +11,7 @@ describe('UserExperience.vue', () => {
       stubs: ['router-link'],
     });
 
-    expect(wrapper.find('h2').text()).toBe('User experience');
+    expect(wrapper.find('h2').text()).toBe('Colaboraciones');
   });
-
+ //User experience
 });
